@@ -1,4 +1,5 @@
 const express = require('express');
+const env = require('./env')
 const app = express();
 const db = require('./persistence');
 const getItems = require('./routes/getItems');
@@ -15,7 +16,7 @@ app.put('/items/:id', updateItem);
 app.delete('/items/:id', deleteItem);
 
 db.init().then(() => {
-    app.listen(3000, () => console.log('Listening on port 3000'));
+    app.listen(env.apiPort, () => console.log('Listening on port' + env.apiPort));
 }).catch((err) => {
     console.error(err);
     process.exit(1);
@@ -23,7 +24,7 @@ db.init().then(() => {
 
 const gracefulShutdown = () => {
     db.teardown()
-        .catch(() => {})
+        .catch(() => { })
         .then(() => process.exit());
 };
 

@@ -19,3 +19,15 @@ npm run test
 ```
 npm run test:integration
 ```
+
+## build docker image
+
+### build
+```
+docker build -t docker-qadev:1.0.0 .
+```
+
+### run
+```
+docker run --rm --name docker-qadev  -e API_PORT=4000 -p 4000:4000 docker-qadev:1.0.0
+```
