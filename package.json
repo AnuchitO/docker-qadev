@@ -6,6 +6,7 @@
   "scripts": {
     "prettify": "prettier -l --write \"**/*.js\"",
     "test": "jest src/",
+    "test:integration": "jest integrations/",
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
