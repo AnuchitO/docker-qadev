@@ -1,8 +1,9 @@
 const request = require("./request")
+const env = require("../src/env")
 
 describe("Integration Test", () => {
     test('it stores item correctly', async () => {
-        const host = 'localhost'
+        const host = env.apiBaseURL
         const port = 3000
         const path = '/items'
         const method = 'POST'
