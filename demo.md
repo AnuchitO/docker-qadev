@@ -45,7 +45,7 @@ but we can't run integration test
     mysql:5.7
 ```
 
-1. start todo app
+4. start todo app
 
 ```   
     docker run --rm --init --name todo-app -p 3000:3000 \
@@ -59,7 +59,7 @@ but we can't run integration test
     sh -c "yarn install && yarn run start"
 ```
 
-1. clean up network `docker network rm todo.network`
+5. clean up network `docker network rm todo.network`
 
 ## Run App with docker-compose
 1. `docker-compose up`
