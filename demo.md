@@ -11,13 +11,13 @@ npm run test
 npm run test:integration
 ```
 
-## Docker Bashboard
-Demo Docker bashboard
-1. Go to Docker bashboard : Images
+## Docker Desktop
+Demo Docker Desktop
+1. Go to Docker Desktop : Images
 1. Go to Terminal `docker pull anuchito/docker-qadev`
-1. Go to Docker bashboard : run it  ==> click on it to see the log
-1. Go to Docker bashboard : stop it
-1. Go to Docker bashboard : exec  ==> npm run test, npm run test:integration
+1. Go to Docker Desktop : run it  ==> click on it to see the log
+1. Go to Docker Desktop : stop it
+1. Go to Docker Desktop : exec  ==> npm run test, npm run test:integration
 
 ## Docker in Terminal
 Demo in Terminal
