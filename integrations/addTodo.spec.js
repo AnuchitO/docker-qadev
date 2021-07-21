@@ -7,7 +7,7 @@ describe("Integration Test", () => {
         const method = 'POST'
         const payload = { name: "What's up!! anuchito" }
 
-        const res = await request(env.apiBaseURL, env.apiPort, path, method, payload)
+        const res = await request(env.API_BASE_URL, env.API_PORT, path, method, payload)
 
         expect(res.body).toHaveProperty("completed")
         expect(res.body).toHaveProperty("id")

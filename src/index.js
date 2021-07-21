@@ -16,7 +16,7 @@ app.put('/items/:id', updateItem);
 app.delete('/items/:id', deleteItem);
 
 db.init().then(() => {
-    app.listen(env.apiPort, () => console.log('Listening on port' + env.apiPort));
+    app.listen(env.API_PORT, () => console.log('Listening on port' + env.API_PORT));
 }).catch((err) => {
     console.error(err);
     process.exit(1);
