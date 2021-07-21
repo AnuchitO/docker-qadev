@@ -39,24 +39,24 @@ but we can't run integration test
 
 ```
     docker run --rm --init --name todo-database \
-    --network todo.network --network-alias mysql.todo.net \
-    -e MYSQL_ROOT_PASSWORD=secret \
-    -e MYSQL_DATABASE=todos \
-    mysql:5.7
+        --network todo.network --network-alias mysql.todo.net \
+        -e MYSQL_ROOT_PASSWORD=secret \
+        -e MYSQL_DATABASE=todos \
+        mysql:5.7
 ```
 
 4. start todo app
 
 ```   
     docker run --rm --init --name todo-app -p 3000:3000 \
-    -w /app  \
-    --network todo.network \
-    -e MYSQL_HOST=mysql.todo.net \
-    -e MYSQL_USER=root \
-    -e MYSQL_PASSWORD=secret \
-    -e MYSQL_DB=todos \
-    docker-qadev \
-    sh -c "yarn install && yarn run start"
+        -w /app  \
+        --network todo.network \
+        -e MYSQL_HOST=mysql.todo.net \
+        -e MYSQL_USER=root \
+        -e MYSQL_PASSWORD=secret \
+        -e MYSQL_DB=todos \
+        docker-qadev \
+        sh -c "yarn install && yarn run start"
 ```
 
 5. clean up network `docker network rm todo.network`
