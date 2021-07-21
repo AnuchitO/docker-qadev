@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   app:
+    restart: always
     build: 
       context: ./
     ports:
@@ -17,6 +18,7 @@ services:
     command: sh -c "npm install && npm run start"
    
   mysql:
+    restart: always
     image: mysql:5.7
     volumes:
       - todo-mysql-data:/var/lib/mysql
