@@ -67,3 +67,11 @@ but we can't run integration test
 1. `npm run test`
 1. `npm run test:integration`
 1. clean up `docker-compose down -v`
+
+
+## MySQL
+1. `docker-compose exec mysql /bin/sh`
+2. `mysql -uroot -psecret`
+3. `show databases;`
+4. `use todos;`
+5. `select * from todo_items;`
